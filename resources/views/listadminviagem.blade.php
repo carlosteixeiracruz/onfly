@@ -81,7 +81,8 @@
 
                     @if(auth()->id() !== $viagem->user_id)
                     <button class="text-red-600 hover:text-red-800 text-xl"
-                        onclick="abrirModal({{ $viagem->id }}, {{ $viagem->situacao }})" title="Cancelar">
+                    onclick="abrirModal({{ $viagem->id }}, {{ $viagem->situacao }}, '{{ $viagem->pais->nome }}', '{{ \Carbon\Carbon::parse($viagem->data_ida)->format('d/m/Y') }}', '{{ \Carbon\Carbon::parse($viagem->data_volta)->format('d/m/Y') }}')"
+                    title="Cancelar">
                         ✈️
                     </button>
                     @else

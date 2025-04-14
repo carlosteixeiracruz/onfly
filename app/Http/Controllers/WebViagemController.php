@@ -90,7 +90,7 @@ class WebViagemController extends Controller
  * Lista todas as viagens de determinado usuário para alteração de situação.
  */
 public function listAdminViagem($id, Request $request)
-{
+{    
     /*Valida se é admin*/
     getUserAdminOrRedirect($request);
 
