@@ -8,12 +8,15 @@ use App\Models\User;
  * Caso não esteja logado, redireciona para a rota de login.
  */
 function getUserIdOrRedirect(Request $request)
-{
+{;
+    
     $userId = $request->session()->get('userid');
 
-    if (!$userId) {
-        return redirect('/users/login');
+    if (is_null($userId)) {
+        die;
     }
+
+
 
     return $userId;
 }
@@ -26,7 +29,7 @@ function getUserAdminOrRedirect(Request $request)
     $userId = $request->session()->get('userid');
 
     if (!$userId) {
-        return redirect()->route('login.index');
+        die;
     }
 
     $user = User::find($userId);

@@ -94,7 +94,7 @@
 {{-- Modal de Alterar Perfil --}}
 <div id="modalPerfil" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center">
     <div class="bg-white rounded-lg p-6 w-full max-w-md shadow-lg">
-        <h3 class="text-xl font-semibold text-gray-800 mb-4">Alterar Perfil</h3>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Alterar Perfil (Falta Implementar)</h3>
         
         <p id="nomeUsuario" class="mb-6 text-gray-700"></p>
         <p id="emailUsuario" class="mb-6 text-gray-700"></p>

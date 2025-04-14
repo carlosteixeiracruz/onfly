@@ -68,8 +68,10 @@ class WebViagemController extends Controller
         return view('viagem', ['userId' => $userId]);
     }
 
-    public function listPedidoViagem()
+    public function listPedidoViagem(Request $request)
     {
+        $userId = getUserIdOrRedirect($request);
+
         $userId = auth()->id(); // Obtém o ID do usuário autenticado
     
         // Ordenando pelo campo 'visto' de forma que '0' apareça primeiro
