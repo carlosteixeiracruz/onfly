@@ -34,6 +34,7 @@ Route::prefix('viagem')->group(function () {
 Route::prefix('users')->group(function () {
     //Route::post('/login', [ApiUsersController::class, 'login']); 
     Route::get('/login', [WebUsersController::class, 'showLoginForm'])->name('login.form');
+    Route::post('/logout', [WebUsersController::class, 'logout'])->name('users.logout');
     Route::post('/login', [WebUsersController::class, 'login'])->name('login.process');
     Route::get('/cadastro', [WebUsersController::class, 'cadastro'])->name('cadastro.index');
     Route::get('/list', [WebUsersController::class, 'listUsers'])->name('listusers.index');

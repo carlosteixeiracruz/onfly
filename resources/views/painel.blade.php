@@ -6,8 +6,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-end h-16 items-center">
             @auth
-            <span class="hidden sm:inline text-sm mr-4">Olá, {{ Auth::user()->name }}</span>
-            <form action=" " method="POST">
+            <span class="sm:inline text-sm mr-4">Olá, {{ Auth::user()->name }}</span>
+            <form action="{{ route('users.logout') }}" method="POST">
                 @csrf
                 <button type="submit" class="text-sm bg-red-500 px-3 py-1 rounded hover:bg-red-600">Sair</button>
             </form>
@@ -15,6 +15,7 @@
         </div>
     </div>
 </nav>
+
 
 {{-- Área dos widgets --}}
 <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">

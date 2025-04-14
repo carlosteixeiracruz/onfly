@@ -55,6 +55,19 @@ class WebUsersController extends Controller
     ], 401);
 }
 
+/**
+     * Efetua o logout.
+     */
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login.form'); // ou ajuste conforme sua rota de login
+    }
+
     /**
      * Exibe a tela de cadastro de usuário.
      */
